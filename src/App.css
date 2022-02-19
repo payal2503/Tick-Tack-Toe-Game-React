@@ -1,0 +1,30 @@
+.App{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app_heading{
+    font-size: 2.5rem;
+    margin: 30px 0px;
+}
+
+.game__section{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 9px;
+    background-color: black;
+}
+
+svg {
+    stroke-width: 15px;
+    stroke: #260db1;
+    fill: none;
+    stroke-linecap: round;
+  }
+  
