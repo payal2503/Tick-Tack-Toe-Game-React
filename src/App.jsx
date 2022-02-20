@@ -18,6 +18,16 @@ const App = () => {
     EMPTY,
     EMPTY,
   ])
+
+  const handleMove = (position) => {
+    // alert(positions);
+    const updatedPositions = [...positions];
+    updatedPositions[position] = player;
+
+    setPositions(updatedPositions);
+    setPlayer((prevPlayer) => (prevPlayer == CIRCLE ? CROSS : CIRCLE));
+  }
+
   return (
     <div className="App">
       <h1 className='app_heading'>React-tick-tack-toe-game </h1>
@@ -25,7 +35,7 @@ const App = () => {
       <div className="game__section">     
        {
          positions.map((pst, index) => (
-           <Square key={index * 55148521} positions={index} value={pst} />
+           <Square key={index * 55148521} positions={index} value={pst} handleMove={handleMove} />
          ))
        }
       </div>
