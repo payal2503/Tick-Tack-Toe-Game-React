@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { CIRCLE, EMPTY, CROSS } from '../constants';
+import { CIRCLE, CROSS } from '../constants';
+import { EMPTY } from '../constants'
 import './App.css';
 import Square from './components/Square';
 
@@ -35,7 +36,7 @@ const App = () => {
       <div className="game__section">     
        {
          positions.map((pst, index) => (
-           <Square key={index * 55148521} positions={index} value={pst} handleMove={handleMove} />
+           <Square key={index * 55148521} position={index} value={pst} handleMove={handleMove} />
          ))
        }
       </div>
