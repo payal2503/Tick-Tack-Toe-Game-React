@@ -2,7 +2,7 @@ import './index.css';
 const ResultScreen = () => {
     return (
         <div>
-            ResultScreen
+            
         </div>
     )
 }

@@ -4,11 +4,11 @@ import Cross from '../Cross';
 import { EMPTY } from '../../../constants';
 import './index.css';
 
-const Square = ({position , value , handleMove}) => {
+const Square = ({position1 , value , handleMove}) => {
 
     const handleClick = () => {
-        if (value == EMPTY) handleMove(position);   
-        console.log(position);
+        if (value == EMPTY) handleMove(position1);   
+        console.log(handleClick);  
     }
 
     return (
