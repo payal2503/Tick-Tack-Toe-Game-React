@@ -8,7 +8,7 @@ import Square from './components/Square';
 
 const App = () => {
 
-  const [player, setPlayer] = useState(CIRCLE);
+  const [player, setPlayer] = useState(CROSS);
   const [positions, setPositions] = useState([
     EMPTY,
     EMPTY,
@@ -67,6 +67,7 @@ const App = () => {
     if (checkPositions(0, 4, 8, CROSS)) return CROSS;
     if (checkPositions(2, 4, 6, CROSS)) return CROSS;
 
+
     // if no match => it is a tie
     if (positions.every(pst => pst !== EMPTY)) return EMPTY;
 
@@ -107,17 +108,19 @@ const App = () => {
   return (
     <div className="App">
       <h1 className='app_heading'>React-tick-tack-toe-game </h1>
-        
-          <div className="game__section">
-            {
-              positions.map((pst, index) => (
-                <Square key={index * 55148521} position1={index} value={pst} handleMove={handleMove} />
-              ))}
-          </div>
-        
+
+      <div className="game__section">
+        {
+          positions.map((pst, index) => (
+
+            <Square key={index * 55148521} position1={index} value={pst} handleMove={handleMove} />
+
+          ))}
+      </div>
+
       {/* result screen */}
-     <button >{winner } Winner!</button> <br></br>
-     <button className="btn__reset" onClick={() => resetGame()}>
+      <button >{winner} Winner!</button> <br></br>
+      <button className="btn__reset" onClick={() => resetGame()}>
         Reset Game
       </button>
     </div>
